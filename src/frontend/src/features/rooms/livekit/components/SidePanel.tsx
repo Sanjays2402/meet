@@ -13,6 +13,8 @@ import { Effects } from './effects/Effects'
 import { Admin } from './Admin'
 import { Tools } from './Tools'
 import { Info } from './Info'
+import { PollsPanel } from '@/features/polls/PollsPanel'
+import { usePollsListener } from '@/features/polls/usePolls'
 import { HStack } from '@/styled-system/jsx'
 import { useReactionsToolbar } from '@/features/reactions/hooks/useReactionsToolbar'
 
@@ -154,10 +156,12 @@ export const SidePanel = () => {
     isToolsOpen,
     isAdminOpen,
     isInfoOpen,
+    isPollsOpen,
     isSubPanelOpen,
     activeSubPanelId,
   } = useSidePanel()
   const { t } = useTranslation('rooms', { keyPrefix: 'sidePanel' })
+  usePollsListener()
   const title = t(`heading.${activeSubPanelId || activePanelId}`)
 
   const { isOpen: isReactionToolbarOpen } = useReactionsToolbar()
@@ -196,6 +200,9 @@ export const SidePanel = () => {
       </Panel>
       <Panel isOpen={isInfoOpen}>
         <Info />
+      </Panel>
+      <Panel isOpen={isPollsOpen} keepAlive={true}>
+        <PollsPanel />
       </Panel>
     </StyledSidePanel>
   )

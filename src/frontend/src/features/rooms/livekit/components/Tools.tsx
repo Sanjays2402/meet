@@ -95,7 +95,7 @@ const ToolButton = ({
 
 export const Tools = () => {
   const { data } = useConfig()
-  const { openTranscript, openScreenRecording, activeSubPanelId, isToolsOpen } =
+  const { openTranscript, openScreenRecording, openPolls, activeSubPanelId, isToolsOpen } =
     useSidePanel()
   const { t } = useTranslation('rooms', { keyPrefix: 'moreTools' })
 
@@ -166,6 +166,12 @@ export const Tools = () => {
           </A>
         )}
       </Text>
+      <ToolButton
+        icon={<Icon type="symbols" name="poll" />}
+        title={t('tools.polls.title')}
+        description={t('tools.polls.body')}
+        onPress={() => openPolls()}
+      />
       {isTranscriptEnabled && (
         <ToolButton
           icon={<Icon type="symbols" name="speech_to_text" />}

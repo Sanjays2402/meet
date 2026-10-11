@@ -330,7 +330,8 @@
       "screenRecording": "Record",
       "admin": "Admin settings",
       "tools": "More tools",
-      "info": "Meeting information"
+      "info": "Meeting information",
+      "polls": "Polls"
     },
     "content": {
       "participants": "participants",
@@ -340,13 +341,28 @@
       "screenRecording": "record",
       "admin": "admin settings",
       "tools": "more tools",
-      "info": "meeting information"
+      "info": "meeting information",
+      "polls": "polls"
     },
     "closeButton": "Hide {{content}}"
   },
   "chat": {
     "disclaimer": "The messages are visible to participants only at the time they are sent. All messages are deleted at the end of the call.",
     "messagesLog": "Chat messages"
+  },
+  "polls": {
+    "create": "Create a poll",
+    "empty": "No polls yet. Polls are only visible to people present when they are launched.",
+    "questionPlaceholder": "Your question",
+    "optionPlaceholder": "Option {{number}}",
+    "addOption": "Add option",
+    "cancel": "Cancel",
+    "launch": "Launch",
+    "close": "Close poll",
+    "closed": "Closed",
+    "by": "By {{name}}",
+    "votes_one": "{{count}} vote",
+    "votes_other": "{{count}} votes"
   },
   "moreTools": {
     "body": "Access more tools to enhance your meetings.",
@@ -360,6 +376,10 @@
       "screenRecording": {
         "title": "Record",
         "body": "Save meetings as video."
+      },
+      "polls": {
+        "title": "Polls",
+        "body": "Ask a question and see live results."
       }
     }
   },
